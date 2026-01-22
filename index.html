@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>KK Lotto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#000428,#004e92);
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.main{
+    width:100%;
+    max-width:420px;
+    background:rgba(0,0,0,0.65);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(0,0,0,0.8);
+}
+
+/* Header */
+.header{
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+    padding:25px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+/* Info Section */
+.info{
+    padding:25px;
+    text-align:center;
+}
+
+.info h2{
+    font-size:20px;
+    margin-bottom:15px;
+    color:#ffcc70;
+}
+
+.info p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.highlight{
+    color:#00ffcc;
+    font-weight:600;
+}
+
+/* Buttons */
+.buttons{
+    padding:25px;
+}
+
+.btn{
+    display:block;
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+/* Highlighted Signal Button */
+.signal{
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    box-shadow:0 0 20px rgba(0,198,255,0.9);
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform:scale(1);
+        box-shadow:0 0 15px rgba(0,198,255,0.7);
+    }
+    50% {
+        transform:scale(1.06);
+        box-shadow:0 0 35px rgba(0,198,255,1);
+    }
+    100% {
+        transform:scale(1);
+        box-shadow:0 0 15px rgba(0,198,255,0.7);
+    }
+}
+
+/* Registration Button */
+.register{
+    background:linear-gradient(135deg,#f7971e,#ffd200);
+    color:#000;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:15px;
+    font-size:12px;
+    opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>KK Lotto</h1>
+    </div>
+
+    <!-- Information -->
+    <div class="info">
+        <h2>Important Information</h2>
+        <p>
+            Minimum Deposit: <span class="highlight">300 PKR</span><br>
+            Minimum Withdrawal: <span class="highlight">500 PKR</span><br><br>
+            Follow our signals channel to increase your winning chances.
+        </p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+
+        <!-- Follow Signals with Sound -->
+        <a href="javascript:void(0)"
+           class="btn signal"
+           onclick="playSoundAndGo('https://whatsapp.com/channel/0029Vb6meOQ5Ejy0nMbJUT2U')">
+            Follow Signals Channel
+        </a>
+
+        <!-- Registration -->
+        <a href="https://kklotto.me/#/register?invitationCode=69053120644" class="btn register">
+           Registration Link
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 KK Lotto. All Rights Reserved.
+    </div>
+
+</div>
+
+<!-- Click Sound -->
+<audio id="clickSound">
+    <source src="https://www.soundjay.com/buttons/sounds/button-16.mp3" type="audio/mpeg">
+</audio>
+
+<!-- JavaScript -->
+<script>
+function playSoundAndGo(url){
+    var sound = document.getElementById("clickSound");
+    sound.play();
+    setTimeout(function(){
+        window.open(url, "_blank");
+    }, 300);
+}
+</script>
+
+</body>
+</html>
